@@ -1,0 +1,147 @@
+/* Palette: maroon, peacock teal (from the couple's outfits), temple gold, ivory */
+:root{
+  --maroon:#4a0b1e; --maroon-2:#6e0f2a; --teal:#0e5c7a; --gold:#b8892c; --gold-l:#e6c872;
+  --ivory:#faf5ea; --paper:#fffdf7; --ink:#2b1a1a; --muted:#6b5a55;
+  --serif:"Cormorant Garamond",Georgia,serif; --tamil:"Noto Serif Tamil",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:56px;-webkit-text-size-adjust:100%}
+body{overflow-x:hidden;overflow-wrap:break-word;font-family:var(--serif);font-size:1.15rem;line-height:1.6;color:var(--ink);background:var(--ivory)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.ta{font-family:var(--tamil);line-height:1.8}
+
+/* nav */
+#nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:center;gap:clamp(14px,4vw,40px);padding:12px 16px;padding-top:max(12px,env(safe-area-inset-top));background:rgba(74,11,30,.92);backdrop-filter:blur(6px)}
+#nav a{color:var(--ivory);text-decoration:none;font-size:1rem;letter-spacing:.04em}
+#nav a:hover{color:var(--gold-l)}
+
+/* buttons */
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:22px}
+.btn{display:inline-block;min-height:44px;text-align:center;padding:11px 24px;border:1px solid var(--gold);background:var(--gold);color:#fff;text-decoration:none;font:600 1rem var(--serif);letter-spacing:.03em;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--maroon-2);border-color:var(--maroon-2)}
+.btn.ghost{background:transparent;color:var(--maroon-2);border-color:var(--maroon-2)}
+.btn.ghost:hover{background:var(--maroon-2);color:#fff}
+
+/* hero: temple photo under a maroon wash, couple photo beside the names */
+#hero{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:clamp(24px,5vw,72px);padding:96px clamp(24px,6vw,96px) 56px;color:var(--ivory);
+  background:linear-gradient(rgba(74,11,30,.86),rgba(74,11,30,.9)),url(images/temple-1.jpeg) center/cover}
+.hero-text{text-align:center}
+.hero-text .ta{color:var(--gold-l);font-size:1.05rem}
+.kicker{margin-top:28px;font-style:italic;font-size:1.3rem;color:var(--gold-l)}
+h1{font-weight:600;font-size:clamp(2.4rem,5.4vw,4.6rem);line-height:1.1;margin:10px 0 22px}
+h1 span{display:block}
+h1 em{display:block;font-weight:400;font-size:.55em;color:var(--gold-l);margin:4px 0}
+.hero-date{display:flex;flex-direction:column;gap:4px;margin-bottom:30px;font-size:1.2rem}
+.hero-date b{font-weight:700;letter-spacing:.06em}
+.hero-photo{width:100%;max-height:78vh;aspect-ratio:3/4;object-fit:cover;justify-self:center;max-width:460px;border:6px solid var(--ivory);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+
+/* chapters: temple photo banner, invitation card overlapping it */
+.chapter{padding-bottom:72px}
+.banner{width:min(920px,100%);height:clamp(240px,42vw,400px);margin:0 auto;background:linear-gradient(transparent 55%,rgba(0,0,0,.25)),var(--img) center/cover}
+.wrap{width:min(760px,100% - 32px);margin:-90px auto 0;position:relative}
+.card{background:var(--paper);border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:-9px;padding:clamp(34px,6vw,60px) clamp(22px,6vw,56px);text-align:center;box-shadow:0 14px 40px rgba(60,20,20,.18)}
+.inv-line{color:var(--maroon-2);font-weight:600;font-size:1.05rem}
+.inv-en{font-style:italic;color:var(--muted);font-size:1rem}
+.ta-title{color:var(--maroon-2);font-size:clamp(1.5rem,4vw,2.1rem);margin-top:12px}
+.subtitle{font-weight:400;font-style:italic;font-size:1.6rem;color:var(--teal);margin-bottom:18px}
+.kanchi{height:10px;margin:22px auto;border-block:2px solid var(--gold);background:repeating-linear-gradient(90deg,var(--maroon-2) 0 10px,var(--paper) 10px 20px)}
+.parents{font-weight:600;line-height:1.8}
+.amp{display:block;color:var(--gold);font-style:italic}
+.req{margin:18px auto;max-width:520px;color:var(--muted);font-style:italic}
+.pair{margin:10px 0}
+.pre{font-style:italic;color:var(--muted)}
+.nm{font-size:clamp(1.6rem,4.5vw,2.2rem);font-weight:700;color:var(--maroon);line-height:1.2}
+.nm small{display:block;font-size:.95rem;font-weight:400;color:var(--muted)}
+.with{margin:10px 0;color:var(--gold);font-style:italic}
+.sub{font-size:1rem;color:var(--muted)}
+.fam{display:grid;gap:8px;margin:6px 0 14px}
+.fam b{display:block;color:var(--maroon)}
+.fam small{display:block;color:var(--muted);font-size:.95rem;margin-bottom:6px}
+.and{font-style:italic;color:var(--gold)}
+.mu{margin:20px 0;padding:14px;background:var(--ivory);font-size:1.05rem}
+.mpanel{margin-top:6px;padding:26px 14px;background:var(--ivory);border:1px solid var(--gold-l)}
+.ta-sm{color:var(--maroon-2);font-weight:600}
+.mlabel{font-size:1.4rem;font-weight:600;color:var(--teal)}
+.bigdate{margin:6px 0 4px;display:flex;align-items:baseline;justify-content:center;gap:12px;color:var(--maroon)}
+.bigdate .d{font-size:4rem;font-weight:700;line-height:1}
+.bigdate .m{font-size:1.5rem}
+.rdate{font-size:1.25rem;margin:6px 0}
+.mvenue b{color:var(--maroon)}
+.mplace{color:var(--muted)}
+.comp{margin-top:28px;font-style:italic;color:var(--muted)}
+.comp-who{font-weight:600;color:var(--maroon)}
+.comp-who small{font-weight:400;color:var(--muted)}
+
+/* countdown */
+.cd-title{margin:34px 0 10px;text-align:center;font-style:italic;font-size:1.3rem;color:var(--maroon-2)}
+.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center;font-size:.95rem;color:var(--muted)}
+.timer div{padding:14px 4px;background:var(--paper);border:1px solid var(--gold-l)}
+.timer span{display:block;font-size:2rem;font-weight:700;color:var(--maroon);line-height:1.1}
+.done{grid-column:1/-1;color:var(--maroon)}
+
+/* reception = evening: darker page, same card */
+.night{background:#2a0814}
+.night .cd-title{color:var(--gold-l)}
+.night .timer div{background:rgba(255,255,255,.06);border-color:rgba(230,200,114,.35);color:var(--gold-l)}
+.night .timer span{color:var(--ivory)}
+
+/* gallery */
+#gallery{padding:80px 16px;text-align:center}
+#gallery h2{font-size:clamp(2rem,5vw,3rem);font-weight:600;color:var(--maroon)}
+.ta-sub{color:var(--teal);margin-bottom:28px}
+.masonry{max-width:1000px;margin:0 auto;columns:3 240px;column-gap:14px}
+.shot{break-inside:avoid;margin-bottom:14px;cursor:zoom-in;overflow:hidden;background:#ddd}
+.shot img{width:100%;height:auto;transition:transform .4s}
+.shot:hover img{transform:scale(1.03)}
+
+footer{padding:44px 20px;text-align:center;background:var(--maroon);color:var(--ivory)}
+.ta-foot{color:var(--gold-l)}
+.foot-family{font-size:1.6rem;font-weight:600}
+.foot-script{font-style:italic;color:var(--gold-l)}
+
+/* lightbox */
+#lightbox{position:fixed;inset:0;z-index:50;background:rgba(15,5,8,.93);display:flex;align-items:center;justify-content:center}
+#lightbox[hidden]{display:none}
+#lightbox img{max-width:92vw;max-height:90vh;object-fit:contain}
+.lb-close,.lb-nav{position:absolute;background:none;border:0;color:#fff;font-size:2.6rem;cursor:pointer;padding:12px}
+.lb-close{top:8px;right:14px}.lb-nav.prev{left:8px}.lb-nav.next{right:8px}
+body.lb-open{overflow:hidden}
+
+/* ---- desktop: soften the banner edges ---- */
+@media(min-width:761px){.banner{-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}}
+
+/* ---- tablets and phones ---- */
+@media(max-width:760px){
+  body{font-size:1.08rem}
+  #nav{gap:20px;padding-bottom:10px}
+  #nav a{font-size:.95rem}
+  #hero{grid-template-columns:1fr;gap:24px;padding:76px 20px 40px;align-content:center}
+  .hero-photo{order:-1;max-width:min(280px,72vw);max-height:46svh;border-width:4px}
+  .kicker{margin-top:16px}
+  .hero-date{margin-bottom:22px}
+  .banner{height:clamp(190px,56vw,300px)}
+  .wrap{width:calc(100% - 24px);margin-top:-56px}
+  .card{padding:34px 18px;outline-offset:-7px}
+  .ta-title{font-size:1.4rem}
+  .bigdate .d{font-size:3.2rem}
+  .bigdate .m{font-size:1.25rem}
+  .btns{flex-direction:column;align-items:stretch}
+  .btns .btn{width:100%}
+  #hero .btn{width:auto}
+  .timer{gap:6px}
+  .timer div{padding:10px 2px;font-size:.8rem}
+  .timer span{font-size:1.5rem}
+  #gallery{padding:56px 12px}
+  .masonry{columns:2;column-gap:8px}
+  .shot{margin-bottom:8px}
+  .lb-nav{font-size:2rem;padding:8px}
+}
+@media(max-width:360px){
+  h1{font-size:2.1rem}
+  .nm{font-size:1.45rem}
+  .timer span{font-size:1.25rem}
+}
+@media(hover:none){.shot:hover img{transform:none}.btn:hover{background:var(--gold);border-color:var(--gold)}.btn.ghost:hover{background:transparent;color:var(--maroon-2);border-color:var(--maroon-2)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wedding Invitation</title>
+  <meta name="theme-color" content="#4a0b1e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+Tamil:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="nav" aria-label="Sections">
+    <a href="#wedding">Wedding</a>
+    <a href="#gallery">Photos</a>
+    <a href="#reception">Reception</a>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-text">
+        <p class="ta">திருச்செந்தூர் முருகன் துணை</p>
+        <p class="kicker">The wedding of</p>
+        <h1><span data-bind="bride"></span><em>&amp;</em><span data-bind="groom"></span></h1>
+        <p class="hero-date">
+          <span><b data-bind="wedding.short"></b> Muhurtham</span>
+          <span><b data-bind="reception.short"></b> Reception</span>
+        </p>
+        <a class="btn" href="#wedding">View invitation</a>
+      </div>
+      <img class="hero-photo" src="images/photo-4.jpeg" alt="Sree Sahana Lakshmi and Kanagaraj at the temple" />
+    </section>
+
+    <!-- WEDDING -->
+    <section id="wedding" class="chapter">
+      <div class="banner" style="--img:url(images/temple-2.jpeg)" role="img" aria-label="Temple gopuram"></div>
+      <div class="wrap">
+        <article class="card">
+          <p class="ta inv-line">திருச்செந்தூர் முருகன் துணை</p>
+          <p class="inv-en">Thiruchendur Murugan Thunai</p>
+          <h2 class="ta ta-title">திருமண அழைப்பிதழ்</h2>
+          <h3 class="subtitle">Wedding Invitation</h3>
+          <div class="kanchi"></div>
+
+          <p class="parents">
+            Mrs. A. Vijaya &amp; Mr. M. Kulanthaivelan
+            <span class="amp">&amp;</span>
+            Mrs. S. Shanthalakshmi &amp; Mr. S. Sornaraj
+          </p>
+          <p class="req">We request the pleasure of your company with family and friends on the occasion of the Marriage of our children</p>
+
+          <div class="pair">
+            <p class="pre">Thiruvalarselvan</p>
+            <h4 class="nm">K. Kanagaraj <small>B.E., (Mech)</small></h4>
+            <p class="with">with</p>
+            <p class="pre">Thiruvalarselvi</p>
+            <h4 class="nm">S. Sree Sahana Lakshmi <small>B.Com., MBA</small></h4>
+          </div>
+
+          <div class="kanchi"></div>
+
+          <div class="mpanel">
+            <p class="ta ta-sm">முகூர்த்தம்</p>
+            <p class="mlabel">Muhurtham, to be held on Thursday</p>
+            <div class="bigdate"><span class="d">10</span><span class="m">December 2026</span></div>
+            <p class="mtime">Between <b>10.30 a.m</b> and <b>11.30 a.m</b></p>
+            <p class="mvenue">at <b data-bind="wedding.venue"></b></p>
+            <p class="mplace" data-bind="wedding.place"></p>
+            <div class="btns">
+              <a class="btn" data-map="wedding" target="_blank" rel="noopener">View location</a>
+              <a class="btn ghost" data-cal="wedding" target="_blank" rel="noopener">Add to calendar</a>
+            </div>
+          </div>
+
+          <p class="comp">With best compliments &amp; blessings from</p>
+          <p class="comp-who">Relatives &amp; Friends</p>
+        </article>
+
+        <p class="cd-title">The auspicious moment arrives in</p>
+        <div class="timer cd" data-event="wedding">
+          <div><span data-u="d">0</span>Days</div><div><span data-u="h">0</span>Hours</div>
+          <div><span data-u="m">0</span>Minutes</div><div><span data-u="s">0</span>Seconds</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <h2>Our moments</h2>
+      <p class="ta ta-sub">எங்கள் தருணங்கள்</p>
+      <div class="masonry" id="masonry"></div>
+    </section>
+
+    <!-- RECEPTION -->
+    <section id="reception" class="chapter night">
+      <div class="banner" style="--img:url(images/temple-3.jpeg)" role="img" aria-label="Temple gopuram at sunset"></div>
+      <div class="wrap">
+        <article class="card">
+          <p class="ta inv-line">திருச்செந்தூர் முருகன் துணை</p>
+          <p class="inv-en">Thiruchendur Murugan Thunai</p>
+          <h2 class="ta ta-title">திருமண வரவேற்பு அழைப்பிதழ்</h2>
+          <h3 class="subtitle">Wedding Reception Invitation</h3>
+          <div class="kanchi"></div>
+
+          <div class="fam">
+            <p><b>Mr. S. Sornaraj</b><small>(Sr. AGM, Legal, Sundaram Finance Ltd., Chennai)</small>
+               <b>Mrs. S. Shanthalakshmi</b><small>B.Com., PGDM</small></p>
+            <span class="and">and</span>
+            <p><b>Mr. M. Kulanthaivelan</b><small>Ex. Indian Army (EME), Agri-Engg., Chennai</small>
+               <b>Mrs. A. Vijaya</b><small>M.A. B.Ed., (Govt. Teacher)</small></p>
+          </div>
+
+          <p class="req">Cordially invite your esteemed presence with family &amp; friends on the happy occasion of the wedding Reception of</p>
+
+          <div class="pair">
+            <p class="pre">Selvi.</p>
+            <h4 class="nm">S. Sree Sahana Lakshmi <small>B.Com., MBA</small></h4>
+            <p class="sub">(Consultant – Sundaram Finance Ltd., Chennai)</p>
+            <p class="sub">(D/o. Mr. S. Sornaraj &amp; Mrs. S. Shanthalakshmi)</p>
+            <p class="with">with</p>
+            <p class="pre">Selvan.</p>
+            <h4 class="nm">K. Kanagaraj <small>B.E., (Mech)</small></h4>
+            <p class="sub">Senior Developer – C.T.S., Chennai</p>
+            <p class="sub">(S/o. Mr. M. Kulanthaivelan and Mrs. A. Vijaya)</p>
+          </div>
+
+          <p class="mu"><b>Muhurtham:</b> On Thursday 10th December 2026, between 10.30 am to 11.30 am at <b>Mahalakshmi Marriage Mahal</b>, Kovilpatti, Tuticorin District</p>
+
+          <div class="mpanel">
+            <p class="ta ta-sm">வரவேற்பு</p>
+            <p class="mlabel">Reception</p>
+            <p class="rdate">On <b>Friday 18th December 2026</b></p>
+            <p class="mtime">@ <b>7.00 pm</b> onwards</p>
+            <p class="mvenue">at <b data-bind="reception.venue"></b></p>
+            <p class="mplace" data-bind="reception.place"></p>
+            <div class="btns">
+              <a class="btn" data-map="reception" target="_blank" rel="noopener">View location</a>
+              <a class="btn ghost" data-cal="reception" target="_blank" rel="noopener">Add to calendar</a>
+            </div>
+          </div>
+
+          <p class="comp">With best compliments &amp; blessings from</p>
+          <p class="comp-who">K. Sundararaj, <small>(Retd. Inspector of Police)</small><br />S. Keerthana Sree, BDS<br />Friends &amp; Relations</p>
+        </article>
+
+        <p class="cd-title">Join us for the celebration in</p>
+        <div class="timer cd" data-event="reception">
+          <div><span data-u="d">0</span>Days</div><div><span data-u="h">0</span>Hours</div>
+          <div><span data-u="m">0</span>Minutes</div><div><span data-u="s">0</span>Seconds</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="ta ta-foot">வாழ்க வளமுடன்</p>
+      <p class="foot-family">Sree Sahana Lakshmi &amp; Kanagaraj</p>
+      <p class="foot-script">With love &amp; blessings</p>
+    </footer>
+  </main>
+
+  <div id="lightbox" hidden>
+    <button class="lb-close" aria-label="Close">×</button>
+    <button class="lb-nav prev" aria-label="Previous">‹</button>
+    <img alt="" />
+    <button class="lb-nav next" aria-label="Next">›</button>
+  </div>
+
+  <!-- Background music: music/song.mp3 (starts automatically, see script.js section 5) -->
+  <audio id="bgm" src="music/song.mp3" loop preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
